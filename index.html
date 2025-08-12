@@ -24,21 +24,42 @@
 <body class="bg-gray-50 text-gray-800">
 
   <!-- Navbar -->
-  <header class="bg-white shadow fixed top-0 left-0 right-0 w-full w-full z-50">
-    <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
-      <h1 class="text-xl font-bold text-blue-600">RPL School</h1>
-      <nav class="hidden md:flex space-x-6">
-        <a href="#about" class="hover:text-blue-500">Tentang RPL</a>
-        <a href="#teachers" class="hover:text-blue-500">Guru</a>
-        <a href="#students" class="hover:text-blue-500">Siswa</a>
-        <a href="#gallery" class="hover:text-blue-500">Galeri</a>
-        <a href="#portfolio" class="hover:text-blue-500">Portofolio</a>
-      </nav>
-    </div>
-  </header>
+<!-- Navbar -->
+<header class="bg-white shadow fixed top-0 left-0 right-0 w-full z-50">
+  <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+    <h1 class="text-xl font-bold text-blue-600">RPL School</h1>
+
+    <!-- Menu untuk layar besar -->
+    <nav class="hidden md:flex space-x-6">
+      <a href="#about" class="hover:text-blue-500">Tentang RPL</a>
+      <a href="#teachers" class="hover:text-blue-500">Guru</a>
+      <a href="#students" class="hover:text-blue-500">Siswa</a>
+      <a href="#gallery" class="hover:text-blue-500">Galeri</a>
+      <a href="#portfolio" class="hover:text-blue-500">Portofolio</a>
+    </nav>
+
+    <!-- Tombol hamburger (mobile) -->
+    <button id="menu-btn" class="md:hidden text-gray-700 focus:outline-none">
+      <!-- Icon garis 3 -->
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+        viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Menu mobile -->
+  <div id="mobile-menu" class="hidden md:hidden bg-white shadow px-4 pb-4">
+    <a href="#about" class="block py-2 hover:text-blue-500">Tentang RPL</a>
+    <a href="#teachers" class="block py-2 hover:text-blue-500">Guru</a>
+    <a href="#students" class="block py-2 hover:text-blue-500">Siswa</a>
+    <a href="#gallery" class="block py-2 hover:text-blue-500">Galeri</a>
+    <a href="#portfolio" class="block py-2 hover:text-blue-500">Portofolio</a>
+  </div>
+</header>
 
   <!-- Hero Section -->
-  <section id="about" class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white text-center py-32 mt-14">
+  <section id="about" class="bg-gradient-to-r px-6 from-blue-600 to-indigo-700 text-white text-center py-32 mt-14">
     <h2 class="text-4xl font-bold mb-4 fade-in">Rekayasa Perangkat Lunak</h2>
     <p class="max-w-2xl mx-auto text-lg fade-in">
       RPL adalah jurusan yang mempelajari pemrograman, pembuatan aplikasi, website, dan teknologi perangkat lunak.
@@ -231,6 +252,10 @@
         }
       });
     }, { threshold: 0.1 });
+
+      document.getElementById('menu-btn').addEventListener('click', () => {
+    document.getElementById('mobile-menu').classList.toggle('hidden');
+  });
 
     elements.forEach(el => observer.observe(el));
   </script>
