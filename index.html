@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,240 +10,428 @@
     html {
       scroll-behavior: smooth;
     }
-    /* Animasi fade-in */
+
     .fade-in {
       opacity: 0;
       transform: translateY(20px);
       transition: all 0.8s ease-out;
     }
+
     .fade-in.visible {
       opacity: 1;
       transform: translateY(0);
     }
   </style>
 </head>
+
 <body class="bg-gray-50 text-gray-800">
 
-  <!-- Navbar -->
-<!-- Navbar -->
-<header class="bg-white shadow fixed top-0 left-0 right-0 w-full z-50">
-  <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
-    <h1 class="text-xl font-bold text-blue-600">RPL School</h1>
 
-    <!-- Menu untuk layar besar -->
-    <nav class="hidden md:flex space-x-6">
-      <a href="#about" class="hover:text-blue-500">Tentang RPL</a>
-      <a href="#teachers" class="hover:text-blue-500">Guru</a>
-      <a href="#students" class="hover:text-blue-500">Siswa</a>
-      <a href="#gallery" class="hover:text-blue-500">Galeri</a>
-      <a href="#portfolio" class="hover:text-blue-500">Portofolio</a>
-    </nav>
+  <header class="bg-white shadow fixed top-0 left-0 right-0 w-full z-50">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+      <h1 class="text-xl font-bold text-blue-600">RPL School</h1>
 
-    <!-- Tombol hamburger (mobile) -->
-    <button id="menu-btn" class="md:hidden text-gray-700 focus:outline-none">
-      <!-- Icon garis 3 -->
-      <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
-        viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M4 6h16M4 12h16M4 18h16"></path>
-      </svg>
-    </button>
-  </div>
 
-  <!-- Menu mobile -->
-  <div id="mobile-menu" class="hidden md:hidden bg-white shadow px-4 pb-4">
-    <a href="#about" class="block py-2 hover:text-blue-500">Tentang RPL</a>
-    <a href="#teachers" class="block py-2 hover:text-blue-500">Guru</a>
-    <a href="#students" class="block py-2 hover:text-blue-500">Siswa</a>
-    <a href="#gallery" class="block py-2 hover:text-blue-500">Galeri</a>
-    <a href="#portfolio" class="block py-2 hover:text-blue-500">Portofolio</a>
-  </div>
-</header>
+      <nav class="hidden md:flex space-x-6">
+        <ul class="flex space-x-6 text-sm font-medium text-gray-600">
+          <li><a href="#about" class="nav-link hover:text-blue-500">Tentang RPL</a></li>
+          <li><a href="#teachers" class="nav-link hover:text-blue-500">Guru</a></li>
+          <li><a href="#students" class="nav-link hover:text-blue-500">Siswa</a></li>
+          <li><a href="#gallery" class="nav-link hover:text-blue-500">Galeri</a></li>
+          <li><a href="#portofolio" class="nav-link hover:text-blue-500">Portofolio</a></li>
+        </ul>
+      </nav>
 
-  <!-- Hero Section -->
+
+      <button id="menu-btn" class="md:hidden text-gray-700 focus:outline-none">
+        <!-- Icon garis 3 -->
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+
+    <div id="mobile-menu" class="hidden md:hidden bg-white shadow px-4 pb-4">
+      <ul class="space-y-2 text-sm font-medium text-gray-600">
+        <li><a href="#about" class="nav-link block py-2 hover:text-blue-500">Tentang RPL</a></li>
+        <li><a href="#teachers" class="nav-link block py-2 hover:text-blue-500">Guru</a></li>
+        <li><a href="#students" class="nav-link block py-2 hover:text-blue-500">Siswa</a></li>
+        <li><a href="#gallery" class="nav-link block py-2 hover:text-blue-500">Galeri</a></li>
+        <li><a href="#portfolio" class="nav-link block py-2 hover:text-blue-500">Portofolio</a></li>
+      </ul>
+    </div>
+  </header>
+
+
   <section id="about" class="bg-gradient-to-r px-6 from-blue-600 to-indigo-700 text-white text-center py-32 mt-14">
     <h2 class="text-4xl font-bold mb-4 fade-in">Rekayasa Perangkat Lunak</h2>
     <p class="max-w-2xl mx-auto text-lg fade-in">
-      RPL adalah jurusan yang mempelajari pemrograman, pembuatan aplikasi, website, dan teknologi perangkat lunak.
-      Kami membekali siswa dengan keterampilan coding, desain sistem, dan pengembangan teknologi masa depan.
+      Pernahkah Anda membayangkan bagaimana aplikasi di ponsel atau website di internet dibuat? Semua itu bisa
+      dipelajari di jurusan Rekayasa Perangkat Lunak (RPL).
+      Kami membekali siswa dengan keterampilan dalam pemrograman, perancangan sistem, dan pengembangan aplikasi berbasis
+      teknologi terkini. Dengan bimbingan guru berpengalaman dan kurikulum yang relevan, RPL siap mencetak generasi
+      unggul di bidang teknologi informasi.
     </p>
   </section>
 
-<!-- Profil Guru -->
-<section id="teachers" class="py-16 bg-gray-100">
-  <div class="max-w-7xl mx-auto px-4">
-    <h3 class="text-2xl font-bold mb-8 text-center fade-in">Profil Guru</h3>
-    <div class="grid md:grid-cols-3 gap-6">
-      <div class="bg-white rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-1 text-center p-6 fade-in">
-        <div class="w-32 h-32 mx-auto rounded-full p-[3px] bg-gradient-to-r from-blue-500 to-indigo-500">
-          <img src="img/kepsek.webp" alt="Guru" class="w-full h-full object-cover rounded-full border-4 border-white shadow">
-        </div>
-        <h4 class="font-bold text-lg mt-4">Budi Budi</h4>
-        <p class="text-gray-600 text-sm">Guru Pemrograman</p>
-      </div>
 
-      <div class="bg-white rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-1 text-center p-6 fade-in">
-        <div class="w-32 h-32 mx-auto rounded-full p-[3px] bg-gradient-to-r from-blue-500 to-indigo-500">
-          <img src="https://via.placeholder.com/150" alt="Guru" class="w-full h-full object-cover rounded-full border-4 border-white shadow">
-        </div>
-        <h4 class="font-bold text-lg mt-4">Mangud Mangud</h4>
-        <p class="text-gray-600 text-sm">Guru Basis Data</p>
-      </div>
-
-      <div class="bg-white rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-1 text-center p-6 fade-in">
-        <div class="w-32 h-32 mx-auto rounded-full p-[3px] bg-gradient-to-r from-blue-500 to-indigo-500">
-          <img src="https://via.placeholder.com/150" alt="Guru" class="w-full h-full object-cover rounded-full border-4 border-white shadow">
-        </div>
-        <h4 class="font-bold text-lg mt-4">Tomo Tomo</h4>
-        <p class="text-gray-600 text-sm">Guru Desain Web</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Profil Siswa -->
-<section id="students" class="py-16">
-  <div class="max-w-7xl mx-auto px-4">
-    <h3 class="text-2xl font-bold mb-8 text-center fade-in">Profil Siswa</h3>
-
-    <!-- Kelas X -->
-    <div class="fade-in mb-8">
-      <h4 class="font-bold text-lg mb-4">Kelas X</h4>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="bg-white rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-1 text-center p-6">
-          <div class="w-28 h-28 mx-auto rounded-full p-[3px] bg-gradient-to-r from-indigo-500 to-purple-500">
-            <img src="img/kepsek.webp" class="w-full h-full object-cover rounded-full border-4 border-white shadow">
+  <section id="teachers" class="py-16 bg-gray-100">
+    <div class="max-w-7xl mx-auto px-4">
+      <h3 class="text-2xl font-bold mb-8 text-center fade-in">Profil Guru</h3>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div
+          class="bg-white rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-1 text-center p-6 fade-in">
+          <div class="w-32 h-32 mx-auto rounded-full p-[3px] bg-gradient-to-r from-blue-500 to-indigo-500">
+            <img src="img/kepsek.webp" alt="Guru"
+              class="w-full h-full object-cover rounded-full border-4 border-white shadow">
           </div>
-          <p class="mt-3 font-semibold">Nahid Nahid</p>
+          <h4 class="font-bold text-lg mt-4">Budi Budi</h4>
+          <p class="text-gray-600 text-sm">Guru Pemrograman</p>
         </div>
-        <div class="bg-white rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-1 text-center p-6">
-          <div class="w-28 h-28 mx-auto rounded-full p-[3px] bg-gradient-to-r from-indigo-500 to-purple-500">
-            <img src="https://via.placeholder.com/120" class="w-full h-full object-cover rounded-full border-4 border-white shadow">
+
+        <div
+          class="bg-white rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-1 text-center p-6 fade-in">
+          <div class="w-32 h-32 mx-auto rounded-full p-[3px] bg-gradient-to-r from-blue-500 to-indigo-500">
+            <img src="https://via.placeholder.com/150" alt="Guru"
+              class="w-full h-full object-cover rounded-full border-4 border-white shadow">
           </div>
-          <p class="mt-3 font-semibold">Waaslim Waslim</p>
+          <h4 class="font-bold text-lg mt-4">Mangud Mangud</h4>
+          <p class="text-gray-600 text-sm">Guru Basis Data</p>
         </div>
-        <div class="bg-white rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-1 text-center p-6">
-          <div class="w-28 h-28 mx-auto rounded-full p-[3px] bg-gradient-to-r from-indigo-500 to-purple-500">
-            <img src="https://via.placeholder.com/120" class="w-full h-full object-cover rounded-full border-4 border-white shadow">
+
+        <div
+          class="bg-white rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-1 text-center p-6 fade-in">
+          <div class="w-32 h-32 mx-auto rounded-full p-[3px] bg-gradient-to-r from-blue-500 to-indigo-500">
+            <img src="https://via.placeholder.com/150" alt="Guru"
+              class="w-full h-full object-cover rounded-full border-4 border-white shadow">
           </div>
-          <p class="mt-3 font-semibold">Mujib Mujibb</p>
+          <h4 class="font-bold text-lg mt-4">Tomo Tomo</h4>
+          <p class="text-gray-600 text-sm">Guru Desain Web</p>
         </div>
       </div>
     </div>
+  </section>
 
-    <!-- Kelas XI -->
-    <div class="fade-in mb-8">
-      <h4 class="font-bold text-lg mb-4">Kelas XI</h4>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="bg-white rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-1 text-center p-6">
-          <div class="w-28 h-28 mx-auto rounded-full p-[3px] bg-gradient-to-r from-indigo-500 to-purple-500">
-            <img src="https://via.placeholder.com/120" class="w-full h-full object-cover rounded-full border-4 border-white shadow">
+
+  <section id="students" class="py-16">
+    <div class="max-w-7xl mx-auto px-4">
+      <h3 class="text-2xl font-bold mb-8 text-center fade-in">Profil Siswa</h3>
+
+      <div class="fade-in mb-8">
+        <h4 class="font-bold text-lg mb-4">Kelas X</h4>
+        <div id="student-list-x" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div
+            class="bg-white rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-1 text-center p-6">
+            <div class="w-28 h-28 mx-auto rounded-full p-[3px] bg-gradient-to-r from-indigo-500 to-purple-500">
+              <img src="img/kepsek.webp" class="w-full h-full object-cover rounded-full border-4 border-white shadow">
+            </div>
+
           </div>
-          <p class="mt-3 font-semibold">Amin Amin</p>
-        </div>
-        <div class="bg-white rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-1 text-center p-6">
-          <div class="w-28 h-28 mx-auto rounded-full p-[3px] bg-gradient-to-r from-indigo-500 to-purple-500">
-            <img src="img/kepsek.webp" class="w-full h-full object-cover rounded-full border-4 border-white shadow">
+          <div
+            class="bg-white rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-1 text-center p-6">
+            <div class="w-28 h-28 mx-auto rounded-full p-[3px] bg-gradient-to-r from-indigo-500 to-purple-500">
+              <img src="https://via.placeholder.com/120"
+                class="w-full h-full object-cover rounded-full border-4 border-white shadow">
+            </div>
+            <p class="mt-3 font-semibold">Waaslim Waslim</p>
           </div>
-          <p class="mt-3 font-semibold">Siti</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Kelas XII -->
-    <div class="fade-in">
-      <h4 class="font-bold text-lg mb-4">Kelas XII</h4>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="bg-white rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-1 text-center p-6">
-          <div class="w-28 h-28 mx-auto rounded-full p-[3px] bg-gradient-to-r from-indigo-500 to-purple-500">
-            <img src="img/kepsek.webp" class="w-full h-full object-cover rounded-full border-4 border-white shadow">
+          <div
+            class="bg-white rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-1 text-center p-6">
+            <div class="w-28 h-28 mx-auto rounded-full p-[3px] bg-gradient-to-r from-indigo-500 to-purple-500">
+              <img src="https://via.placeholder.com/120"
+                class="w-full h-full object-cover rounded-full border-4 border-white shadow">
+            </div>
+            <p class="mt-3 font-semibold">Mujib Mujibb</p>
           </div>
-          <p class="mt-3 font-semibold">Budi</p>
+          <div
+            class="bg-white rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-1 text-center p-6">
+            <div class="w-28 h-28 mx-auto rounded-full p-[3px] bg-gradient-to-r from-indigo-500 to-purple-500">
+              <img src="https://via.placeholder.com/120"
+                class="w-full h-full object-cover rounded-full border-4 border-white shadow">
+            </div>
+            <p class="mt-3 font-semibold">Mujib Mujibb</p>
+          </div>
+          <div
+            class="bg-white rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-1 text-center p-6">
+            <div class="w-28 h-28 mx-auto rounded-full p-[3px] bg-gradient-to-r from-indigo-500 to-purple-500">
+              <img src="https://via.placeholder.com/120"
+                class="w-full h-full object-cover rounded-full border-4 border-white shadow">
+            </div>
+            <p class="mt-3 font-semibold">Mujib Mujibb</p>
+          </div>
+          <div
+            class="bg-white rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-1 text-center p-6">
+            <div class="w-28 h-28 mx-auto rounded-full p-[3px] bg-gradient-to-r from-indigo-500 to-purple-500">
+              <img src="https://via.placeholder.com/120"
+                class="w-full h-full object-cover rounded-full border-4 border-white shadow">
+            </div>
+            <p class="mt-3 font-semibold">Mujib Mujibb</p>
+          </div>
+          <div
+            class="bg-white rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-1 text-center p-6">
+            <div class="w-28 h-28 mx-auto rounded-full p-[3px] bg-gradient-to-r from-indigo-500 to-purple-500">
+              <img src="https://via.placeholder.com/120"
+                class="w-full h-full object-cover rounded-full border-4 border-white shadow">
+            </div>
+            <p class="mt-3 font-semibold">Mujib Mujibb</p>
+          </div>
+        </div>
+        <div class="flex justify-center md:justify-end items-center mt-6 space-x-2" id="pagination-x">
+          <button
+            class="prevBtn flex items-center gap-1 px-4 py-2 bg-white border border-gray-300 text-gray-700 rounded-md hover:bg-gray-100 transition disabled:opacity-50 disabled:cursor-not-allowed">
+            &larr; Previous
+          </button>
+          <span class="pageIndicator px-4 py-2 font-semibold text-gray-700">Page 1</span>
+          <button
+            class="nextBtn flex items-center gap-1 px-4 py-2 bg-white border border-gray-300 text-gray-700 rounded-md hover:bg-gray-100 transition disabled:opacity-50 disabled:cursor-not-allowed">
+            Next &rarr;
+          </button>
+        </div>
+      </div>
+
+
+
+      <div class="fade-in mb-8">
+        <h4 class="font-bold text-lg mb-4">Kelas XI</h4>
+        <div id="student-list-xi" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div
+            class="bg-white rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-1 text-center p-6">
+            <div class="w-28 h-28 mx-auto rounded-full p-[3px] bg-gradient-to-r from-indigo-500 to-purple-500">
+              <img src="https://via.placeholder.com/120"
+                class="w-full h-full object-cover rounded-full border-4 border-white shadow">
+            </div>
+            <p class="mt-3 font-semibold">Amin Amin Amin </p>
+          </div>
+          <div
+            class="bg-white rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-1 text-center p-6">
+            <div class="w-28 h-28 mx-auto rounded-full p-[3px] bg-gradient-to-r from-indigo-500 to-purple-500">
+              <img src="img/kepsek.webp" class="w-full h-full object-cover rounded-full border-4 border-white shadow">
+            </div>
+            <p class="mt-3 font-semibold">Royyan</p>
+          </div>
+          <div
+            class="bg-white rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-1 text-center p-6">
+            <div class="w-28 h-28 mx-auto rounded-full p-[3px] bg-gradient-to-r from-indigo-500 to-purple-500">
+              <img src="img/kepsek.webp" class="w-full h-full object-cover rounded-full border-4 border-white shadow">
+            </div>
+            <p class="mt-3 font-semibold">Edu</p>
+          </div>
+          <div
+            class="bg-white rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-1 text-center p-6">
+            <div class="w-28 h-28 mx-auto rounded-full p-[3px] bg-gradient-to-r from-indigo-500 to-purple-500">
+              <img src="img/kepsek.webp" class="w-full h-full object-cover rounded-full border-4 border-white shadow">
+            </div>
+            <p class="mt-3 font-semibold">ilham</p>
+          </div>
+          <div
+            class="bg-white rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-1 text-center p-6">
+            <div class="w-28 h-28 mx-auto rounded-full p-[3px] bg-gradient-to-r from-indigo-500 to-purple-500">
+              <img src="img/kepsek.webp" class="w-full h-full object-cover rounded-full border-4 border-white shadow">
+            </div>
+            <p class="mt-3 font-semibold">asdi</p>
+          </div>
+        </div>
+        <div class="flex justify-center md:justify-end items-center mt-6 space-x-2" id="pagination-xi">
+          <button
+            class="prevBtn flex items-center gap-1 px-4 py-2 bg-white border border-gray-300 text-gray-700 rounded-md hover:bg-gray-100 transition disabled:opacity-50 disabled:cursor-not-allowed">
+            &larr; Previous
+          </button>
+          <span class="pageIndicator px-4 py-2 font-semibold text-gray-700">Page 1</span>
+          <button
+            class="nextBtn flex items-center gap-1 px-4 py-2 bg-white border border-gray-300 text-gray-700 rounded-md hover:bg-gray-100 transition disabled:opacity-50 disabled:cursor-not-allowed">
+            Next &rarr;
+          </button>
+        </div>
+      </div>
+
+
+
+      <div class="fade-in mb-8">
+        <h4 class="font-bold text-lg mb-4">Kelas XII</h4>
+        <div id="student-list-xii" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div
+            class="bg-white rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-1 text-center p-6">
+            <div class="w-28 h-28 mx-auto rounded-full p-[3px] bg-gradient-to-r from-indigo-500 to-purple-500">
+              <img src="img/kepsek.webp" class="w-full h-full object-cover rounded-full border-4 border-white shadow">
+            </div>
+            <p class="mt-3 font-semibold">irza x jeki</p>
+          </div>
+          <div
+            class="bg-white rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-1 text-center p-6">
+            <div class="w-28 h-28 mx-auto rounded-full p-[3px] bg-gradient-to-r from-indigo-500 to-purple-500">
+              <img src="img/kepsek.webp" class="w-full h-full object-cover rounded-full border-4 border-white shadow">
+            </div>
+            <p class="mt-3 font-semibold">irza x jeki</p>
+          </div>
+          <div
+            class="bg-white rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-1 text-center p-6">
+            <div class="w-28 h-28 mx-auto rounded-full p-[3px] bg-gradient-to-r from-indigo-500 to-purple-500">
+              <img src="img/kepsek.webp" class="w-full h-full object-cover rounded-full border-4 border-white shadow">
+            </div>
+            <p class="mt-3 font-semibold">irza x jeki</p>
+          </div>
+          <div
+            class="bg-white rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-1 text-center p-6">
+            <div class="w-28 h-28 mx-auto rounded-full p-[3px] bg-gradient-to-r from-indigo-500 to-purple-500">
+              <img src="img/kepsek.webp" class="w-full h-full object-cover rounded-full border-4 border-white shadow">
+            </div>
+            <p class="mt-3 font-semibold">irza x jeki</p>
+          </div>
+          <div
+            class="bg-white rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-1 text-center p-6">
+            <div class="w-28 h-28 mx-auto rounded-full p-[3px] bg-gradient-to-r from-indigo-500 to-purple-500">
+              <img src="img/kepsek.webp" class="w-full h-full object-cover rounded-full border-4 border-white shadow">
+            </div>
+            <p class="mt-3 font-semibold">irza x jeki</p>
+          </div>
+        </div>
+        <div class="flex justify-center md:justify-end items-center mt-6 space-x-2" id="pagination-xii">
+          <button
+            class="prevBtn flex items-center gap-1 px-4 py-2 bg-white border border-gray-300 text-gray-700 rounded-md hover:bg-gray-100 transition disabled:opacity-50 disabled:cursor-not-allowed">
+            &larr; Previous
+          </button>
+          <span class="pageIndicator px-4 py-2 font-semibold text-gray-700">Page 1</span>
+          <button
+            class="nextBtn flex items-center gap-1 px-4 py-2 bg-white border border-gray-300 text-gray-700 rounded-md hover:bg-gray-100 transition disabled:opacity-50 disabled:cursor-not-allowed">
+            Next &rarr;
+          </button>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
+
+  <section id="gallery" class="py-16 bg-gray-100">
+    <div class="max-w-7xl mx-auto px-4">
+      <h3 class="text-2xl font-bold mb-8 text-center fade-in">Kegiatan Coding Siswa</h3>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-white rounded-lg shadow hover:shadow-lg transition transform hover:-translate-y-1 fade-in">
+          <img src="img/devin.jpeg" class="rounded-t-lg w-full h-48 object-cover">
+          <div class="p-4">
+            <h4 class="font-bold text-lg">Belajar HTML & CSS</h4>
+            <p class="text-gray-600 text-sm">Siswa mempelajari dasar HTML dan CSS untuk membuat halaman web statis.</p>
+          </div>
+        </div>
+        <div class="bg-white rounded-lg shadow hover:shadow-lg transition transform hover:-translate-y-1 fade-in">
+          <img src="img/royan.jpeg" class="rounded-t-lg w-full h-48 object-cover">
+          <div class="p-4">
+            <h4 class="font-bold text-lg">Belajar JavaScript</h4>
+            <p class="text-gray-600 text-sm">Pengenalan JavaScript untuk membuat website interaktif.</p>
+          </div>
+        </div>
+        <div class="bg-white rounded-lg shadow hover:shadow-lg transition transform hover:-translate-y-1 fade-in">
+          <img src="img/jeki.jpeg" class="rounded-t-lg w-full h-48 object-cover">
+          <div class="p-4">
+            <h4 class="font-bold text-lg">Belajar Framework Laravel</h4>
+            <p class="text-gray-600 text-sm">Penerapan Laravel untuk membangun aplikasi web dinamis.</p>
+          </div>
         </div>
       </div>
     </div>
+  </section>
 
-  </div>
-</section>
 
- <!-- Galeri -->
-<section id="gallery" class="py-16 bg-gray-100">
-  <div class="max-w-7xl mx-auto px-4">
-    <h3 class="text-2xl font-bold mb-8 text-center fade-in">Kegiatan Coding Siswa</h3>
-    <div class="grid md:grid-cols-3 gap-6">
-      <div class="bg-white rounded-lg shadow hover:shadow-lg transition transform hover:-translate-y-1 fade-in">
-        <img src="https://via.placeholder.com/400x250" class="rounded-t-lg w-full h-48 object-cover">
-        <div class="p-4">
-          <h4 class="font-bold text-lg">Belajar HTML & CSS</h4>
-          <p class="text-gray-600 text-sm">Siswa mempelajari dasar HTML dan CSS untuk membuat halaman web statis.</p>
+  <section id="portofolio" class="py-16">
+    <div class="max-w-7xl mx-auto px-4">
+      <h3 class="text-2xl font-bold mb-8 text-center fade-in">Portofolio Website Siswa</h3>
+      <div id="list-portofolio" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <div class="bg-white rounded-lg shadow hover:shadow-lg transition transform hover:-translate-y-1 fade-in">
+          <img src="https://via.placeholder.com/400x250" class="rounded-t-lg w-full h-48 object-cover">
+          <div class="p-4 text-center">
+            <h4 class="font-bold text-lg">Toko Online</h4>
+            <a href="https://contoh-tokoonline.com" target="_blank" class="text-blue-600 hover:underline text-sm">
+              https://contoh-tokoonline.com
+            </a>
+          </div>
         </div>
+
+
+        <div class="bg-white rounded-lg shadow hover:shadow-lg transition transform hover:-translate-y-1 fade-in">
+          <img src="https://via.placeholder.com/400x250" class="rounded-t-lg w-full h-48 object-cover">
+          <div class="p-4 text-center">
+            <h4 class="font-bold text-lg">Website Perpustakaan</h4>
+            <p class="text-gray-500 text-sm">Masih dalam pengembangan (localhost)</p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow hover:shadow-lg transition transform hover:-translate-y-1 fade-in">
+          <img src="https://via.placeholder.com/400x250" class="rounded-t-lg w-full h-48 object-cover">
+          <div class="p-4 text-center">
+            <h4 class="font-bold text-lg">Website Sekolah</h4>
+            <a href="https://contoh-websekolah.com" target="_blank" class="text-blue-600 hover:underline text-sm">
+              https://contoh-websekolah.com
+            </a>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow hover:shadow-lg transition transform hover:-translate-y-1 fade-in">
+          <img src="https://via.placeholder.com/400x250" class="rounded-t-lg w-full h-48 object-cover">
+          <div class="p-4 text-center">
+            <h4 class="font-bold text-lg">Website Manajemen PKL</h4>
+            <a href="https://pklmanusa.smkmaarifnu1ajibarang.sch.id/" target="_blank" class="text-blue-600 hover:underline text-sm">
+              https://pklmanusa.smkmaarifnu1ajibarang.sch.id/
+            </a>
+          </div>
+        </div>
+        
+        <div class="bg-white rounded-lg shadow hover:shadow-lg transition transform hover:-translate-y-1 fade-in">
+          <img src="https://via.placeholder.com/400x250" class="rounded-t-lg w-full h-48 object-cover">
+          <div class="p-4 text-center">
+            <h4 class="font-bold text-lg">Website Manajemen PKL</h4>
+            <a href="https://pklmanusa.smkmaarifnu1ajibarang.sch.id/" target="_blank" class="text-blue-600 hover:underline text-sm">
+              https://pklmanusa.smkmaarifnu1ajibarang.sch.id/
+            </a>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow hover:shadow-lg transition transform hover:-translate-y-1 fade-in">
+          <img src="https://via.placeholder.com/400x250" class="rounded-t-lg w-full h-48 object-cover">
+          <div class="p-4 text-center">
+            <h4 class="font-bold text-lg">Website Manajemen PKL</h4>
+            <a href="https://pklmanusa.smkmaarifnu1ajibarang.sch.id/" target="_blank" class="text-blue-600 hover:underline text-sm">
+              https://pklmanusa.smkmaarifnu1ajibarang.sch.id/
+            </a>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow hover:shadow-lg transition transform hover:-translate-y-1 fade-in">
+          <img src="https://via.placeholder.com/400x250" class="rounded-t-lg w-full h-48 object-cover">
+          <div class="p-4 text-center">
+            <h4 class="font-bold text-lg">Website Manajemen PKL</h4>
+            <a href="https://pklmanusa.smkmaarifnu1ajibarang.sch.id/" target="_blank" class="text-blue-600 hover:underline text-sm">
+              https://pklmanusa.smkmaarifnu1ajibarang.sch.id/
+            </a>
+          </div>
+        </div>
+
       </div>
-      <div class="bg-white rounded-lg shadow hover:shadow-lg transition transform hover:-translate-y-1 fade-in">
-        <img src="https://via.placeholder.com/400x250" class="rounded-t-lg w-full h-48 object-cover">
-        <div class="p-4">
-          <h4 class="font-bold text-lg">Belajar JavaScript</h4>
-          <p class="text-gray-600 text-sm">Pengenalan JavaScript untuk membuat website interaktif.</p>
-        </div>
-      </div>
-      <div class="bg-white rounded-lg shadow hover:shadow-lg transition transform hover:-translate-y-1 fade-in">
-        <img src="https://via.placeholder.com/400x250" class="rounded-t-lg w-full h-48 object-cover">
-        <div class="p-4">
-          <h4 class="font-bold text-lg">Belajar Framework Laravel</h4>
-          <p class="text-gray-600 text-sm">Penerapan Laravel untuk membangun aplikasi web dinamis.</p>
-        </div>
+      <div class="flex justify-center items-center mt-6 space-x-2" id="pagination-portofolio">
+        <button
+          class="prevBtn flex items-center gap-1 px-4 py-2 bg-white border border-gray-300 text-gray-700 rounded-md hover:bg-gray-100 transition disabled:opacity-50 disabled:cursor-not-allowed">
+          &larr; Previous
+        </button>
+        <span class="pageIndicator px-4 py-2 font-semibold text-gray-700">Page 1</span>
+        <button
+          class="nextBtn flex items-center gap-1 px-4 py-2 bg-white border border-gray-300 text-gray-700 rounded-md hover:bg-gray-100 transition disabled:opacity-50 disabled:cursor-not-allowed">
+          Next &rarr;
+        </button>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Portofolio -->
-<section id="portfolio" class="py-16">
-  <div class="max-w-7xl mx-auto px-4">
-    <h3 class="text-2xl font-bold mb-8 text-center fade-in">Portofolio Website Siswa</h3>
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      
-      <!-- Website 1 -->
-      <div class="bg-white rounded-lg shadow hover:shadow-lg transition transform hover:-translate-y-1 fade-in">
-        <img src="https://via.placeholder.com/400x250" class="rounded-t-lg w-full h-48 object-cover">
-        <div class="p-4 text-center">
-          <h4 class="font-bold text-lg">Toko Online</h4>
-          <a href="https://contoh-tokoonline.com" target="_blank" class="text-blue-600 hover:underline text-sm">
-            https://contoh-tokoonline.com
-          </a>
-        </div>
-      </div>
 
-      <!-- Website 2 -->
-      <div class="bg-white rounded-lg shadow hover:shadow-lg transition transform hover:-translate-y-1 fade-in">
-        <img src="https://via.placeholder.com/400x250" class="rounded-t-lg w-full h-48 object-cover">
-        <div class="p-4 text-center">
-          <h4 class="font-bold text-lg">Website Perpustakaan</h4>
-          <p class="text-gray-500 text-sm">Masih dalam pengembangan (localhost)</p>
-        </div>
-      </div>
-
-      <!-- Website 3 -->
-      <div class="bg-white rounded-lg shadow hover:shadow-lg transition transform hover:-translate-y-1 fade-in">
-        <img src="https://via.placeholder.com/400x250" class="rounded-t-lg w-full h-48 object-cover">
-        <div class="p-4 text-center">
-          <h4 class="font-bold text-lg">Website Sekolah</h4>
-          <a href="https://contoh-websekolah.com" target="_blank" class="text-blue-600 hover:underline text-sm">
-            https://contoh-websekolah.com
-          </a>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-  <!-- Footer -->
   <footer class="bg-blue-600 text-white py-6 mt-16">
     <div class="container mx-auto px-6 text-center">
       <p>© 2025 RPL School. All rights reserved.</p>
     </div>
   </footer>
 
-  <!-- Script Animasi Scroll -->
+
   <script>
     const elements = document.querySelectorAll('.fade-in');
     const observer = new IntersectionObserver(entries => {
@@ -253,11 +442,94 @@
       });
     }, { threshold: 0.1 });
 
-      document.getElementById('menu-btn').addEventListener('click', () => {
-    document.getElementById('mobile-menu').classList.toggle('hidden');
-  });
+    document.getElementById('menu-btn').addEventListener('click', () => {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
 
     elements.forEach(el => observer.observe(el));
   </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      function setupPagination(containerId, paginationId, itemsPerPage = 3) {
+        const container = document.getElementById(containerId);
+        const students = Array.from(container.children);
+        const totalPages = Math.ceil(students.length / itemsPerPage);
+
+        let currentPage = 1;
+        const paginationContainer = document.getElementById(paginationId);
+        const prevBtn = paginationContainer.querySelector(".prevBtn");
+        const nextBtn = paginationContainer.querySelector(".nextBtn");
+        const pageIndicator = paginationContainer.querySelector(".pageIndicator")
+
+        function showPage(page) {
+          students.forEach((student, index) => {
+            student.style.display = 'none';
+            if (index >= (page - 1) * itemsPerPage && index < page * itemsPerPage) {
+              student.style.display = 'block';
+            }
+          });
+
+          prevBtn.disabled = page === 1;
+          nextBtn.disabled = page === totalPages;
+          pageIndicator.textContent = `Page ${page}`;
+        }
+
+        prevBtn.addEventListener("click", () => {
+          if (currentPage > 1) {
+            currentPage--;
+            showPage(currentPage);
+          }
+        });
+
+        nextBtn.addEventListener("click", () => {
+          if (currentPage < totalPages) {
+            currentPage++;
+            showPage(currentPage);
+          }
+        });
+
+        showPage(currentPage);
+      }
+      
+
+      // Setup untuk tiap kelas
+      setupPagination("student-list-x", "pagination-x");
+      setupPagination("student-list-xi", "pagination-xi");
+      setupPagination("student-list-xii", "pagination-xii");
+      setupPagination("list-portofolio", "pagination-portofolio", 6);
+    });
+  </script>
+
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const sections = document.querySelectorAll("section[id]");
+    const navLinks = document.querySelectorAll(".nav-link");
+
+    function activateMenuOnScroll() {
+      let scrollY = window.scrollY;
+
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 100; // buffer offset
+        const sectionHeight = section.offsetHeight;
+        const sectionId = section.getAttribute("id");
+
+        if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+          navLinks.forEach(link => {
+            link.classList.remove("text-blue-600", "font-semibold");
+            if (link.getAttribute("href") === `#${sectionId}`) {
+              link.classList.add("text-blue-600", "font-semibold");
+            }
+          });
+        }
+      });
+    }
+
+    window.addEventListener("scroll", activateMenuOnScroll);
+  });
+</script>
+
+
 </body>
+
 </html>
