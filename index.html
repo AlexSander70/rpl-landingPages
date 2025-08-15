@@ -74,9 +74,39 @@
       Hubungi kami
   </a>
 
+  <section class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-16 px-6">
+    <div class="min-h-screen grid grid-cols-1 md:grid-cols-2 items-center px-6 md:px-16 gap-10">
+    
+    
+    <div class="space-y-4 text-center md:text-left">
+      <h1 class="text-4xl md:text-5xl font-bold leading-tight">SELAMAT<br>DATANG</h1>
+      <p class="text-lg">Di Website Rekayasa Perangkat Lunak SMK MA'ARIF NU 1 AJIBARANG</p>
+      <div class="space-y-1">
+        <p>Alamat: JL. RAYA AJIBARANG KM 1  Pandansari, Kec. Ajibarang, Kab. Banyumas</p>
+        <p>Telp: (0281) 571 284</p>
+        <p>Email: smkmaarif_ajibarang@yahoo.co.id</p>
+      </div>
+      <button>
+        <a href="#about" class="bg-white text-sky-600 px-6 py-2 rounded-lg font-semibold shadow hover:bg-sky-100">
+          JELAJAHI
+        </a>
+      </button>
+    </div>
+
+    <div class="flex justify-center relative">
+   
+  
+      <img src="https://cdn-icons-png.flaticon.com/512/919/919828.png" 
+           class="w-full h-full">
+
+    </div>
+
+  </div>
+  </section>
 
 
-  <section id="about" class="bg-gradient-to-r px-6 from-blue-600 to-indigo-700 text-white text-center py-32 mt-14">
+
+  <section id="about" class="bg-gradient-to-r px-6 from-blue-600 to-indigo-700 text-white text-center py-32">
     <h2 class="text-4xl font-bold mb-4 fade-in">Rekayasa Perangkat Lunak</h2>
     <p class="max-w-2xl mx-auto text-lg fade-in">
       RPL adalah jurusan yang mempelajari cara membuat dan mengembangkan perangkat lunak. Di sini, siswa belajar pemrograman,
@@ -255,7 +285,7 @@
             <div class="w-28 h-28 mx-auto rounded-full p-[3px] bg-gradient-to-r from-indigo-500 to-purple-500">
               <img src="img/wakil.jpg" class="w-full h-full object-cover rounded-full border-4 border-white shadow">
             </div>
-            <p class="mt-3 font-semibold">Levi Fakhsi Nurmumtazah </p>
+            <p class="mt-3 font-semibold">Levi Fakhsi</p>
           </div>
           <div
             class="bg-white rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-1 text-center p-6">
@@ -340,6 +370,16 @@
       <div id="list-portofolio" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
         <div class="bg-white rounded-lg shadow hover:shadow-lg transition transform hover:-translate-y-1 fade-in">
+          <img src="img/pkl.png" class="rounded-t-lg w-full h-48 object-cover">
+          <div class="p-4 text-center">
+            <h4 class="font-bold text-lg">Website Manajemen PKL</h4>
+            <a href="https://pklmanusa.smkmaarifnu1ajibarang.sch.id/" target="_blank" class="text-blue-600 hover:underline text-sm">
+              https://pklmanusa.smkmaarifnu1ajibarang.sch.id/
+            </a>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow hover:shadow-lg transition transform hover:-translate-y-1 fade-in">
           <img src="img/banjaranyar.png" class="rounded-t-lg w-full h-48 object-cover">
           <div class="p-4 text-center">
             <h4 class="font-bold text-lg">Website SD N Banjaranyar</h4>
@@ -349,17 +389,8 @@
           </div>
         </div>
 
-
         <div class="bg-white rounded-lg shadow hover:shadow-lg transition transform hover:-translate-y-1 fade-in">
-          <img src="https://via.placeholder.com/400x250" class="rounded-t-lg w-full h-48 object-cover">
-          <div class="p-4 text-center">
-            <h4 class="font-bold text-lg">Website Perpustakaan</h4>
-            <p class="text-gray-500 text-sm">Masih dalam pengembangan (localhost)</p>
-          </div>
-        </div>
-
-        <div class="bg-white rounded-lg shadow hover:shadow-lg transition transform hover:-translate-y-1 fade-in">
-          <img src="img/banjaranyar.png" class="rounded-t-lg w-full h-48 object-cover">
+          <img src="img/karangtengah.png" class="rounded-t-lg w-full h-48 object-cover">
           <div class="p-4 text-center">
             <h4 class="font-bold text-lg">Website SD 2 Karang Tengah</h4>
             <a href="http://sdn02karangtengah.sch.id" target="_blank" class="text-blue-600 hover:underline text-sm">
@@ -368,15 +399,6 @@
           </div>
         </div>
 
-        <div class="bg-white rounded-lg shadow hover:shadow-lg transition transform hover:-translate-y-1 fade-in">
-          <img src="img/pkl.png" class="rounded-t-lg w-full h-48 object-cover">
-          <div class="p-4 text-center">
-            <h4 class="font-bold text-lg">Website Manajemen PKL</h4>
-            <a href="https://pklmanusa.smkmaarifnu1ajibarang.sch.id/" target="_blank" class="text-blue-600 hover:underline text-sm">
-              https://pklmanusa.smkmaarifnu1ajibarang.sch.id/
-            </a>
-          </div>
-        </div>
         
         <div class="bg-white rounded-lg shadow hover:shadow-lg transition transform hover:-translate-y-1 fade-in">
           <img src="img/tiparkidul.png" class="rounded-t-lg w-full h-48 object-cover">
@@ -493,7 +515,7 @@
       setupPagination("student-list-x", "pagination-x");
       setupPagination("student-list-xi", "pagination-xi");
       setupPagination("student-list-xii", "pagination-xii");
-      setupPagination("list-portofolio", "pagination-portofolio", 6);
+      setupPagination("list-portofolio", "pagination-portofolio");
     });
   </script>
 
